@@ -21,3 +21,13 @@ btnsOpenModal[i].addEventListener('click', openModal);
   }
  btnCloseModal.addEventListener('click', closeModal);
  overlay.addEventListener('click', closeModal);
+
+ //HOW TO RESPOND TO KEYBOARD EVENTS
+ //WE USE EVENT LISTENER
+
+ document.addEventListener('keydown', function(e) {
+//we have to look at the event presser
+if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+  closeModal();
+}
+ });
